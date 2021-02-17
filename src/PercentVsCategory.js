@@ -19,7 +19,7 @@ const PercentVsCategory = () => {
 
                 }
                 map[key] = mergedObj;
-                
+
             }
 
         });
@@ -37,10 +37,10 @@ const PercentVsCategory = () => {
 
     const prepareChartData = () => {
         const obj = groupByCategory(data);
-       let  option = {
+        let option = {
             tooltip: {
                 trigger: 'axis',
-               
+
                 formatter: (params) => {
                     const param = params[0];
                     const axisValue = param.axisValue;
@@ -81,9 +81,9 @@ const PercentVsCategory = () => {
                     markLine: {
                         data: [
                             { type: 'average', name: 'Sample' }
-                            
+
                         ],
-                        lineStyle: {width:2, type: "solid"}
+                        lineStyle: { width: 2, type: "solid" }
                     }
                 }
 
@@ -94,7 +94,7 @@ const PercentVsCategory = () => {
     }
     return (
         <>
-        <h1 style={{"padding-left": "40%"}}> Percent Value vs Category </h1>
+            <h1 style={{ "padding-left": "40%" }}> Percent Value vs Category </h1>
             <ReactEchartWrapper
                 options={prepareChartData()}
                 height="300px"
